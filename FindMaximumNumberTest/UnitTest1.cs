@@ -55,5 +55,29 @@ namespace FindMaximumNumberTest
             Assert.AreEqual(num, 3.3f);
         }
 
+        [Test]
+        public void GivenMaxStringFirstNumber_WhenAnalized_ShouldReturnMaxNumber()
+        {
+            FindMaximum max = new FindMaximum();
+            string name = max.FindMaxStringValue("Peach", "Apple", "Banana");
+            Assert.AreEqual(name, "Peach");
+        }
+
+        [Test]
+        public void GivenMaxStringSecondNumber_WhenAnalized_ShouldReturnMaxNumber()
+        {
+            FindMaximum max = new FindMaximum();
+            string name = max.FindMaxStringValue("Apple","Peach","Banana");
+            Assert.AreEqual(name, "Peach");
+        }
+        [Test]
+        public void GivenMaxStringThirdtNumber_WhenAnalized_ShouldReturnMaxNumber()
+        {
+            FindMaximum max = new FindMaximum();
+            string name = max.FindMaxStringValue("Banana","Apple","Peach");
+            Assert.AreEqual(name, "Peach");
+        }
+
+
     }
 }
